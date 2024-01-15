@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Spotify Playlist Info</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Spotify Playlist Info</h1>
+        <p>Login with your Spotify account to access playlist information.</p>
+        <a href="{{ url_for('login') }}" id="login-button">Login with Spotify</a>
+        <div id="playlist-info" class="hidden">
+            <h2>Your Playlist Information</h2>
+            <ul id="playlist-list"></ul>
+        </div>
+               
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
